@@ -1,0 +1,20 @@
+.background-gradient (@startColor: #eee, @endColor: white) when not (@endColor = ~"") {
+  background: @startColor; /* Old browsers */
+  background: -webkit-linear-gradient(@endColor); /* Chrome10+,Safari5.1+ */
+  background: linear-gradient(@endColor); /* W3C */
+}
+.elementor-button {
+  color: @dt-btn-color;
+  background-color: @dt-btn-bg-color;
+  .background-gradient (@dt-btn-bg-color, @dt-btn-bg-color-2);
+  border-color: @dt-btn-border-color;
+  font-family: @base-font-family;
+
+  .box-hover:hover &,
+  &:hover, &:focus {
+    color: @dt-btn-hover-color;
+    background: @dt-btn-hover-bg-color;
+    .background-gradient (@dt-btn-hover-bg-color, @dt-btn-hover-bg-color-2);
+    border-color: @dt-btn-border-hover-color;
+  }
+}

@@ -1,0 +1,65 @@
+@mixin media($breakpoint)
+{
+    @if map-has-key($breakpoints, $breakpoint)
+    {
+        @media (max-width: #{map-get($breakpoints, $breakpoint)})
+        {
+            @content;
+        }
+    } @else
+    {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+@mixin media_min($breakpoint)
+{
+    @if map-has-key($breakpoints, $breakpoint)
+    {
+        @media (min-width: #{map-get($breakpoints, $breakpoint)})
+        {
+            @content;
+        }
+    } @else
+    {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+/**
+ * Mixins
+ * Placeholder
+ */
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin link() {
+    text-decoration: none;
+    outline: none !important;
+    background-image: linear-gradient(to top, transparent 0, $color-red 0, $color-red 1px, transparent 1px);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+    transition: -webkit-background-size 0.3s;
+    transition: background-size 0.3s;
+
+    &:hover {
+        background-size: 100% 100%;
+    }
+}

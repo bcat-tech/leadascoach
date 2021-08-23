@@ -1,0 +1,69 @@
+/**
+ * Breakpoints
+ */
+$breakpoints: (
+        xs: 500px,
+        sm: 767px,
+        md: 991px,
+        lg: 1200px,
+        xl: 1400px,
+);
+
+/**
+ * Body
+ */
+$font-body                      :   'Josefin Sans', sans-serif;
+$font-title                     :   'Oswald', sans-serif;
+$color-body                     :   #1C3360;
+$color-h                        :   #1C3360;
+$textSize-body                  :   16px;
+$textLineHeight-body            :   27px;
+$backgroundColor-body           :   #fff;
+$fontWeight-body                :   400;
+
+$textSize-body-medium           :   14px;
+$textLineHeight-body-medium     :   22px;
+
+/**
+ * Container
+ */
+$container-padding              :   30px;
+$container-maxWidth             :   1330px;
+/**
+ * Link
+ */
+$color-link                     :   #1C3360;
+
+/**
+ * Background
+ */
+$background-blue                :   #13216F;
+$background-grey                :   #F8F9FC;
+$background-red                 :   #DA1B5A;
+$background-yelow               :   #E5AF2A;
+$background-orange              :   #FF7A00;
+$background-green               :   #B7FF1F;
+
+/**
+ * Colors
+ */
+
+$color-primary      :   #1C9DE3;
+$color-secondary    :   #0B2837;
+$color-blue         :   #1C3360;
+$color-blue-dark    :   #133C52;
+$color-blue-light   :   #00A9B7;
+$color-dark         :   #232323;
+$color-dark-alt     :   #292929;
+$color-gray         :   #DADADA;
+$color-gray-light   :   #E5E5E5;
+$color-gray-dark    :   #909090;
+$color-yellow       :   #E5AF2A;
+$color-yellow-light :   #FCC62B;
+$color-orange       :   #FF7A00;
+$color-text         :   #ACACAC;
+$color-white        :   #fff;
+$color-light        :   #E7E5E5;
+$color-red          :   #DA1B5A;
+$color-green        :   #B7FF1F;
+$color-purple       :   #7C62E3;

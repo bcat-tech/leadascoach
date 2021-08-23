@@ -1,0 +1,88 @@
+/**
+ * Classes Buttons
+ *
+ * btn
+ *
+ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0px 30px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  height: 50px;
+  letter-spacing: -0.02em;
+  transition: all 0.12s linear;
+  text-align: center;
+
+  &-opacity {
+    background-color: transparent;
+    border-color: $color-red;
+
+    &:hover {
+      color: #fff;
+      border-color: $color-red;
+      background-color: $color-red;
+    }
+  }
+
+  &-gradient {
+    color: #fff;
+    border: none;
+    background: linear-gradient(110.3deg, $color-red 34.05%, $color-yellow 86.98%);
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      background: linear-gradient(100.3deg, $color-yellow-light 34.05%, $color-red 86.98%);
+      opacity: 0;
+      transition: all 2s ease-in-out;
+      border-radius: 999px;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: #fff;
+      //background: linear-gradient(110.3deg, $color-red 34.05%, $color-red 86.98%);
+      &::after {
+        opacity: 1;
+      }
+    }
+
+  }
+
+  &-color {
+
+    &-white {
+      color: #fff;
+    }
+  }
+
+  &-lg {
+    height: 57px;
+    line-height: 18px;
+
+  }
+
+  span {
+    position: relative;
+    top: 2px;
+  }
+
+}
+
+
